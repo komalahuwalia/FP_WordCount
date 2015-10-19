@@ -29,26 +29,7 @@ public class MainTest {
         expectedOccurance.putAll(expectedMap);
         Map<String, Integer> actualOccurance = Main.getWordsWithOccuranceInAscendingOrder(inputString);
 
-        boolean isCorrect = true;
-        assertEquals(expectedOccurance.size(), actualOccurance.size());
-        Iterator<String> iteratorExpected = expectedOccurance.keySet().iterator();
-        Iterator<String> iteratorActual = actualOccurance.keySet().iterator();
-
-        while (iteratorExpected.hasNext()) {
-            String expectedWord = iteratorExpected.next();
-            String actualWord = iteratorActual.next();
-            if (!expectedWord.equals(actualWord)) {
-                isCorrect = false;
-                break;
-            }
-            if (expectedOccurance.get(expectedWord).intValue() !=
-                    actualOccurance.get(actualWord).intValue()) {
-                isCorrect = false;
-                break;
-            }
-        }
-
-        assertTrue(isCorrect);
+        assertTrue(Main.compareMaps(expectedOccurance,actualOccurance));
     }
 
     @Test
