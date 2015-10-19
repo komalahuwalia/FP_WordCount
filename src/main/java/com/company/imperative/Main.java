@@ -1,4 +1,5 @@
 package com.company.imperative;
+import com.company.maputils.MapAscendingSort;
 import com.company.maputils.MapUtils;
 
 import java.util.*;
@@ -23,7 +24,7 @@ public class Main {
 
     private static Map<String, Integer> sortMapWithAscendingByOccuranceThenByKey(Map<String, Integer> map) {
 
-        Map<String, Integer> ascendingMap = new TreeMap<>(new MapUtils().MapAscendingSort(map));
+        Map<String, Integer> ascendingMap = new TreeMap(new MapAscendingSort(map));
         ascendingMap.putAll(map);
         return ascendingMap;
     }

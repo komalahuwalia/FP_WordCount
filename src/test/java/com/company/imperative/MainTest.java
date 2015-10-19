@@ -1,5 +1,7 @@
 package com.company.imperative;
 
+import com.company.maputils.MapAscendingSort;
+import com.company.maputils.MapUtils;
 import org.junit.Before;
 import org.junit.Test;
 import java.util.*;
@@ -29,7 +31,7 @@ public class MainTest {
         expectedOccurance.putAll(expectedMap);
         Map<String, Integer> actualOccurance = Main.getWordsWithOccuranceInAscendingOrder(inputString);
 
-        assertTrue(Main.compareMaps(expectedOccurance, actualOccurance));
+        assertTrue(MapUtils.compareMaps(expectedOccurance, actualOccurance));
     }
 
     @Test

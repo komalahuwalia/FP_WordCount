@@ -1,6 +1,8 @@
 package com.company.functional;
 
 import com.company.imperative.*;
+import com.company.maputils.MapAscendingSort;
+import com.company.maputils.MapUtils;
 import org.junit.Before;
 import org.junit.Test;
 
