@@ -1,4 +1,4 @@
-package com.company;
+package com.company.imperative;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -29,7 +29,7 @@ public class MainTest {
         expectedOccurance.putAll(expectedMap);
         Map<String, Integer> actualOccurance = Main.getWordsWithOccuranceInAscendingOrder(inputString);
 
-        assertTrue(Main.compareMaps(expectedOccurance,actualOccurance));
+        assertTrue(Main.compareMaps(expectedOccurance, actualOccurance));
     }
 
     @Test
