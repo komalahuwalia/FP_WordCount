@@ -3,6 +3,7 @@ package com.company.maputils;
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.Map;
+import java.util.TreeMap;
 
 public class MapUtils {
 
@@ -26,6 +27,13 @@ public class MapUtils {
             }
         }
         return areEqual;
+    }
+
+    public static Map<String, Integer> sortMapWithAscendingByOccuranceThenByKey(Map<String, Integer> map) {
+
+        Map<String, Integer> ascendingMap = new TreeMap(new MapAscendingSort(map));
+        ascendingMap.putAll(map);
+        return ascendingMap;
     }
 
 }

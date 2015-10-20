@@ -19,14 +19,7 @@ public class Main {
             else
                 occurrence.put(word, 1);
         }
-        return sortMapWithAscendingByOccuranceThenByKey(occurrence);
-    }
-
-    private static Map<String, Integer> sortMapWithAscendingByOccuranceThenByKey(Map<String, Integer> map) {
-
-        Map<String, Integer> ascendingMap = new TreeMap(new MapAscendingSort(map));
-        ascendingMap.putAll(map);
-        return ascendingMap;
+        return MapUtils.sortMapWithAscendingByOccuranceThenByKey(occurrence);
     }
 
     public static List<String> getDelimeterSeparatedWordsFromLine(String words, String delimeter) {
